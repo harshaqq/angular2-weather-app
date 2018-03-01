@@ -2,10 +2,14 @@ Features for initial version
 ----------------------------
 	This is the simple forecast app which completely modular, The app is developed using angular2 with below points in mind
 	
-		* The app should display forecasted data for 5 days, not focused on current data
-		* It should simple not too complicated
-		* Less focused on ui more focused on javascript since it can be changed at any tiem
-		* DOM tree should match with component tree 			
+	* The app should display forecasted data for 5 days, not focused on current data
+	* It should simple not too complicated
+	* Less focused on ui more focused on javascript since it can be changed at any tiem
+	* DOM tree should match with component tree 			
+	
+Live Demo
+---------
+	[Link](http://sriharsha91.github.io/angular2-weather-app)
 		
 What is missing
 ---------------

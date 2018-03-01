@@ -21,7 +21,7 @@ export class ForecastComponent implements OnInit, OnDestroy {
    * This variable holds the forecast data
    * This gets updated via service subscription
    */
-  private forecast: Forecast;
+  public forecast: Forecast;
 
   /* 
    * Subscription 
