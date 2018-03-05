@@ -22,7 +22,7 @@ export class ApiService {
   private country: string = 'IN';
   private city: string = 'Bengaluru';
   private apiKey: string = '5da121ed237dd74a8f5ed3d5dfe60f52';
-  private url: string = `http://api.openweathermap.org/data/2.5/forecast?q=${this.city},${this.country}&appid=${this.apiKey}&callback=JSONP_CALLBACK`;
+  private url: string = `https://api.openweathermap.org/data/2.5/forecast?q=${this.city},${this.country}&appid=${this.apiKey}&callback=JSONP_CALLBACK`;
 
   constructor(private http: HttpClient){    }
 
