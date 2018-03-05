@@ -32,7 +32,7 @@ export class ApiService {
   get(): void{
     /* let _data = Object.assign({}, TestData);
      * let data: Forecast = this.parseData(_data.list);*/
-    this.http.jsonp(this.url, 'callback').subscribe((data)=>{
+    this.http.jsonp(this.url, 'callback').subscribe((data: any)=>{
       /* console.log(data); */
       let _data: Forecast = this.parseData(data.list);
       this.subscription.next(_data);     
