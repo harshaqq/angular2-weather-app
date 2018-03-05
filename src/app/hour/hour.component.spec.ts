@@ -26,6 +26,7 @@ describe('HourComponent', () => {
     temp_min: 'abc',
     humidity: 'abc',
     wind_speed: 'abc',
+    wind_deg: 'abc',
     icon: 'abc'
   };
   let de: DebugElement;

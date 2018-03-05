@@ -36,7 +36,6 @@ export class ForecastComponent implements OnInit, OnDestroy {
    */
   ngOnInit() {
     this.subscription = this.api.subscription.subscribe((data) => {
-      console.log(data);
       this.forecast = data;
     });
     this.api.get();

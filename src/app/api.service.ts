@@ -7,6 +7,8 @@ import { Forecast } from './forecast';
 import { Day } from './day';
 import { Hour } from './hour';
 
+import { HttpClient } from '@angular/common/http';
+
 /*
  * This is the implementation of api service
  * Its main responsibilty is to handle server calls and parsing the response
@@ -16,13 +18,25 @@ export class ApiService {
 
   public subscription: BehaviorSubject<Forecast> = new BehaviorSubject<Forecast>({ days: new Array<Day>() });
 
+  /* These are hardcoded values, if component provides these parameters then it's not required */
+  private country: string = 'IN';
+  private city: string = 'Bengaluru';
+  private apiKey: string = '5da121ed237dd74a8f5ed3d5dfe60f52';
+  private url: string = `http://api.openweathermap.org/data/2.5/forecast?q=${this.city},${this.country}&appid=${this.apiKey}&callback=JSONP_CALLBACK`;
+
+  constructor(private http: HttpClient){    }
+
   /* 
    * Calls api and gets the data
    */
   get(): void{
-    let _data = Object.assign({}, TestData);
-    let data: Forecast = this.parseData(_data.list);
-    this.subscription.next(data);
+    /* let _data = Object.assign({}, TestData);
+     * let data: Forecast = this.parseData(_data.list);*/
+    this.http.jsonp(this.url, 'callback').subscribe((data)=>{
+      /* console.log(data); */
+      let _data: Forecast = this.parseData(data.list);
+      this.subscription.next(_data);     
+    });
   }
 
   /* 

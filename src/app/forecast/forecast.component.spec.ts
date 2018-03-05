@@ -8,10 +8,14 @@ import { ApiService } from '.././api.service';
 
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 
+import { Day } from '.././day';
+import { Forecast } from '.././forecast';
+
 @Injectable()
 export class ApiServiceStub{
 
   public subscription: BehaviorSubject<string> = new BehaviorSubject<string>('abc');
+  /* let data: Forecast = { days: new Array<Day>() };  */
   
   get(){
     return this.subscription.next('abc');
@@ -51,7 +55,6 @@ describe('ForecastComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ForecastComponent);
     component = fixture.componentInstance;
-    component.forecast = 'abc';
     fixture.detectChanges();
     apiStub = TestBed.get(ApiService);
   });

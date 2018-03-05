@@ -34,11 +34,11 @@ describe('DayComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(DayComponent);
     component = fixture.componentInstance;
-    component.data = 'abc';
     fixture.detectChanges();
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  
 });
