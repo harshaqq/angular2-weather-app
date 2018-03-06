@@ -14,11 +14,11 @@ import { Forecast } from '.././forecast';
 @Injectable()
 export class ApiServiceStub{
 
-  public subscription: BehaviorSubject<string> = new BehaviorSubject<string>('abc');
-  /* let data: Forecast = { days: new Array<Day>() };  */
+  public data: Forecast = { days: new Array<Day>() };   
+  public subscription: BehaviorSubject<string> = new BehaviorSubject<string>(this.data);
   
   get(){
-    return this.subscription.next('abc');
+    return this.subscription.next(this.data);
   }  
 }
 
@@ -66,7 +66,7 @@ describe('ForecastComponent', () => {
   it('should resolve data', fakeAsync(() => {
     component.ngOnInit();
     fixture.detectChanges();
-    expect(component.forecast).toEqual('abc');
+    expect(component.forecast).toEqual({ days: new Array<Day>() });
   }));
   
 });

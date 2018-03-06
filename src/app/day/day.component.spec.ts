@@ -23,6 +23,7 @@ class HourComponentStub{
 describe('DayComponent', () => {
   let component: DayComponent;
   let fixture: ComponentFixture<DayComponent>;
+  let data: Day = {date: new Date(), hours: new Array<Day>()};
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -34,6 +35,7 @@ describe('DayComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(DayComponent);
     component = fixture.componentInstance;
+    component.data = data;
     fixture.detectChanges();
   });
 
