@@ -27,7 +27,7 @@ describe('HourComponent', () => {
     humidity: 'abc',
     wind_speed: 'abc',
     wind_deg: 'abc',
-    icon: 'abc'
+    icon: 'http://placehold.it/32x32'
   };
   let de: DebugElement;
   
@@ -64,14 +64,13 @@ describe('HourComponent', () => {
     expect(de.nativeElement.textContent).toContain('abc');
   });
 
-  /* it('should render degree symbol', () => {
-   *   de = fixture.debugElement.query(By.css('.temp'));    
-   *   expect(de.nativeElement.textContent).toContain('');    
-   * });*/
-
+  it('should render degree symbol', () => {
+    de = fixture.debugElement.query(By.css('.temp'));    
+    expect(de.nativeElement.textContent).toContain('℉');
+  });
 
   it('should render image', () => {
     de = fixture.debugElement.query(By.css('img'));
-    expect(de.nativeElement.src).toContain('abc');
+    expect(de.nativeElement.src).toContain('http://placehold.it/32x32');
   });
 });

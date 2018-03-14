@@ -44,7 +44,7 @@ export class ApiService {
    * @param data List of forecasted data
    * @return The parsed data
    */
-  private parseData(data: Array<any>): Forecast{
+   parseData(data: Array<any>): Forecast{
     let forecast: Forecast = { days: new Array<Day>() };
     let day: Day;
     data.forEach((item, i) => {

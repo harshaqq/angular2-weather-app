@@ -21,10 +21,10 @@ export class ForecastComponent implements OnInit, OnDestroy {
    * This variable holds the forecast data
    * This gets updated via service subscription
    */
-  public forecast: Forecast;
+  data: Forecast;
 
   /* 
-   * Subscription 
+   * Subscription object
    */
   private subscription;
 
@@ -36,7 +36,7 @@ export class ForecastComponent implements OnInit, OnDestroy {
    */
   ngOnInit() {
     this.subscription = this.api.subscription.subscribe((data) => {
-      this.forecast = data;
+      this.data = data;
     });
     this.api.get();
   }

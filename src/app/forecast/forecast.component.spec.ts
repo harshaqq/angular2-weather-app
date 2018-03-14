@@ -15,7 +15,7 @@ import { Forecast } from '.././forecast';
 export class ApiServiceStub{
 
   public data: Forecast = { days: new Array<Day>() };   
-  public subscription: BehaviorSubject<string> = new BehaviorSubject<string>(this.data);
+  public subscription: BehaviorSubject<Forecast> = new BehaviorSubject<Forecast>(this.data);
   
   get(){
     return this.subscription.next(this.data);
@@ -66,7 +66,7 @@ describe('ForecastComponent', () => {
   it('should resolve data', fakeAsync(() => {
     component.ngOnInit();
     fixture.detectChanges();
-    expect(component.forecast).toEqual({ days: new Array<Day>() });
+    expect(component.data).toEqual({ days: new Array<Day>() });
   }));
   
 });
