@@ -56,3 +56,10 @@
 -------------------
 	Note: Currently e2e test cases are not written for this app
 	Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+
+## Deploying to github pages
+	1. Generate github token [Link](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/)
+	2. Set GH_TOKEN environment variable with value as generated token
+	3. Change repository url in package.json if required
+	4. Run `npm deploy`
+	5. It will deploy to gh-pages branch

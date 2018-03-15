@@ -8,7 +8,8 @@
     "build": "ng build --prod",
     "test": "ng test --single-run --code-coverage --browsers PhantomJS",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "deploy": "ng build --prod --base-href \"https://sriharsha91.github.io/angular2-weather-app/\" && ngh -S"
   },
   "private": true,
   "dependencies": {
