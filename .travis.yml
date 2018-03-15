@@ -9,6 +9,6 @@ before_script:
   - chmod +x ./cc-test-reporter
   - ./cc-test-reporter before-build
 script:
-  - ng test --singe-run --code-coverage
+  - ng test --singe-run --code-coverage --browsers PhantomJS
 after_script:
   - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
