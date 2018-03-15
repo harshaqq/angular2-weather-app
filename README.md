@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.org/sriharsha91/angular2-weather-app.svg?branch=master)](https://travis-ci.org/sriharsha91/angular2-weather-app)
-
+[![Test Coverage](https://api.codeclimate.com/v1/badges/1afbe59b899e7f570e66/test_coverage)](https://codeclimate.com/github/sriharsha91/angular2-weather-app/test_coverage)
+<a href="https://codeclimate.com/github/sriharsha91/angular2-weather-app/maintainability"><img src="https://api.codeclimate.com/v1/badges/1afbe59b899e7f570e66/maintainability" /></a>
 
 
 ## Features for initial version
