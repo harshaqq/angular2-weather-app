@@ -6,5 +6,4 @@ env:
 before_script:
   - npm install -g codeclimate-test-reporter
 after_success:
-  - ng test --singe-run --code-coverage --browser PhantomJS
   - codeclimate < ./coverage/lcov.info  
