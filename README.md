@@ -1,3 +1,7 @@
+[![Build Status](https://travis-ci.org/sriharsha91/angular2-weather-app.svg?branch=master)](https://travis-ci.org/sriharsha91/angular2-weather-app)
+
+
+
 ## Features for initial version
 ----------------------------
 	This is the simple forecast app which completely modular, The app is developed using angular2 with below points in mind

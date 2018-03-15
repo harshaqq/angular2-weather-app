@@ -11,8 +11,8 @@ import { Forecast } from './forecast';
 
 import { TestData } from './test-data';
 
-class HttpClientStub{
-  jsonp(url: string, cb: string){
+class HttpClientStub {
+  jsonp(url: string, cb: string) {
     return Observable.of({days: new Array<Day>()});
   }  
 }
