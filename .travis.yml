@@ -1,14 +1,10 @@
-env:
-  global:
-    - CC_TEST_REPORTER_ID=0a75a4b2ec78c12f6008a624f49c7f83d3b31a378b7e5aad4aae881bd428977c
 language: node_js
 node_js:
   - 8.4.0
+env:
+  CODECLIMATE_REPO_TOKEN: 0a75a4b2ec78c12f6008a624f49c7f83d3b31a378b7e5aad4aae881bd428977c
 before_script:
-  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
-  - chmod +x ./cc-test-reporter
-  - ./cc-test-reporter before-build
-script:
-  - ng test --singe-run --code-coverage --browsers PhantomJS
-after_script:
-  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
+  - npm install -g codeclimate-test-reporter
+after_success:
+  - ng test --singe-run --code-coverage --browser PhantomJS
+  - codeclimate < ./coverage/lcov.info  
